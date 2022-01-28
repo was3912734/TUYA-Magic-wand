@@ -1,0 +1,1 @@
+# TUYA-Magic-wand
