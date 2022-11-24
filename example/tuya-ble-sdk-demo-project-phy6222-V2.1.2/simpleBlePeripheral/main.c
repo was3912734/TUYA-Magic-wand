@@ -142,7 +142,7 @@ static void hal_low_power_io_init(void)
         {GPIO_P09,   GPIO_PULL_UP    },/*UART TX*/
         {GPIO_P10,   GPIO_PULL_UP    },/*UART RX*/
         {GPIO_P11,   GPIO_FLOATING  },//new就绪脚
-        {GPIO_P14,   GPIO_PULL_DOWN  },//灯
+        {GPIO_P14,   GPIO_FLOATING },//灯
         {GPIO_P15,   GPIO_PULL_DOWN  },
         {GPIO_P16,   GPIO_FLOATING   },
         {GPIO_P18,   GPIO_PULL_DOWN  },
@@ -160,8 +160,8 @@ static void hal_low_power_io_init(void)
         {GPIO_P27,   GPIO_PULL_DOWN  },
         {GPIO_P31,   GPIO_FLOATING   },
         {GPIO_P32,   GPIO_FLOATING  },//6050数据就绪脚，高电平就绪
-        {GPIO_P33,   GPIO_PULL_UP   },//配网按键
-        {GPIO_P34,   GPIO_PULL_UP   },//使用按键
+        {GPIO_P33,   GPIO_FLOATING   },//配网按键
+        {GPIO_P34,   GPIO_FLOATING   },//使用按键
         #endif
     };
 

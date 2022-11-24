@@ -72,14 +72,19 @@ VOID_T tuya_enter_sleep_mode(UINT_T *wakeup_pin, UCHAR_T cnt)
     //err_code = bsp_btn_ble_sleep_mode_prepare();
     //APP_ERROR_CHECK(err_code);
 	
-    for (UCHAR_T i = 0; i < cnt; i++) {
+    //for (UCHAR_T i = 0; i < cnt; i++) {
         //nrf_gpio_cfg_input(wakeup_pin[i], NRF_GPIO_PIN_PULLUP);
         //nrf_gpio_pin_sense_t sense = NRF_GPIO_PIN_SENSE_LOW;
         //nrf_gpio_cfg_sense_set(wakeup_pin[i], sense);
 		//hal_gpio_wakeup_set(wakeup_pin[i],NEGEDGE);	  
-    }
+    //}
 
 		//hal_pwrmgr_poweroff(GPIO_P02);
+		
+
+		
+		hal_gpio_pull_set(GPIO_P14, GPIO_FLOATING);
+		
 		pwroff_cfg_t pwr_wkp_cfg[]= {{GPIO_P34,NEGEDGE}};
     hal_pwrmgr_poweroff( pwr_wkp_cfg, 1 );
 
